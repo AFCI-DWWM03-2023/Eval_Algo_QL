@@ -9,9 +9,11 @@ $alpha = 0;
 $spec = 0;
 
 $strvoy = "aeiou"; // liste des voyelles
-$strspec = "[]^¨'£$%^&*()}{@:'#~?><>,;@|\-=-_+-¬` éèëêàâäöôïîüûç"; // liste des caractères spéciaux
+$strspec = "[]^¨'£$%^&*()}{@:'#~?><>.,;@|\-=-_+-¬` éèëêàâäöôïîüûç"; // liste des caractères spéciaux
+    // les lettres à accent comptent comme 2 caractères!!!!!
 
 foreach (str_split($chaine) as $char) { // pour chaque caractère dans la chaine
+    echo $char;
     $count += 1;
     if (str_contains($strspec, $char)) { // on verifie si c'est un caractère spécial (char est dans la liste)
         $spec += 1;
